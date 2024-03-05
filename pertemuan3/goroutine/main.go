@@ -25,7 +25,7 @@ type Car struct {
 	Seller       string `json:"seller"`
 	Mmr          string `json:"mmr"`
 	SellingPrice string `json:"selling_price"`
-	SaleDate     string `json:"sale_date_"`
+	SaleDate     string `json:"sale_date"`
 }
 
 func main() {
@@ -65,7 +65,7 @@ func main() {
 
 	fmt.Println("Success")
 	fmt.Println(time.Since(startedAt))
-	
+
 }
 
 func csvToStruct(records [][]string) []Car {
