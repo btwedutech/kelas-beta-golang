@@ -33,8 +33,13 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println("Removing json directory")
 
-	os.Mkdir("json", 0777)
+	err = os.Mkdir("json", 0777)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println("Creating json directory")
 
 	fileCsv, err := os.Open("cars_100000.csv")
 
@@ -59,7 +64,7 @@ func main() {
 
 	var channel = make(chan Car)
 
-	jml := 6;
+	jml := 3
 	fmt.Println("Menjalankan ", jml, "process goroutine")
 
 	for i := 0; i < jml; i++ {
@@ -130,9 +135,8 @@ func saveJsonToFile(encoded []byte, name string) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	defer file.close()
-	
-	file.Close()
+
+	defer file.Close()
 
 	_, err = file.Write(encoded)
 	if err != nil {
