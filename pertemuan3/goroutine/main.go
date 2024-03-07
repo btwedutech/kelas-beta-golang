@@ -31,7 +31,7 @@ type Car struct {
 func main() {
 	startedAt := time.Now()
 
-	fileCsv, err := os.Open("cars_500.csv")
+	fileCsv, err := os.Open("cars_100000.csv")
 
 	if err != nil {
 		fmt.Println(err)
