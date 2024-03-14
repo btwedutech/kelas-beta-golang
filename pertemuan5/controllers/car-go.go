@@ -26,7 +26,7 @@ func GetCarsGo(c *fiber.Ctx) error {
 		return err
 	}
 
-	jmlGoroutine := 5
+	jmlGoroutine := 10
 
 	var carChanTemp []<-chan model.Car
 
