@@ -19,6 +19,8 @@ func GetCarsGo(c *fiber.Ctx) error {
 		return err
 	}
 
+	defer file.Close()
+
 	csvChan, err := loadFileGoroutine(file)
 	if err != nil {
 		return err
