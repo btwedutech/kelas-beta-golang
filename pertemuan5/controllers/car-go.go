@@ -45,7 +45,7 @@ func GetCarsGo(c *fiber.Ctx) error {
 		return err
 	}
 
-	fmt.Println("Waktu yang dibutuhkan get cars co", time.Since(started))
+	fmt.Println("[Dengan Goroutine]", time.Since(started))
 
 	return c.Send(jsonData)
 }

@@ -30,7 +30,7 @@ func GetCars(c *fiber.Ctx) error {
 		return err
 	}
 
-	fmt.Println("Waktu yang dibutuhkan untuk get cars", time.Since(started))
+	fmt.Println("[Tanpa Goroutine]", time.Since(started))
 
 	return c.Send(jsonData)
 }
