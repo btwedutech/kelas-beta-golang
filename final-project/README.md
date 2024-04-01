@@ -5,7 +5,7 @@ Dalam final project ini peserta akan dibagi menjadi beberapa kelompok, dimana ma
 
 ## Topik Final Project
 
-Akan diberikan 4 pilihan topik dengan leveling `Basic`, `Intermediate` dan `Advanced`, peserta akan memilih salah satu dari ke-empat topik tersebut untuk dijadikan concern sampai pertemuan 14.
+Akan diberikan 5 pilihan topik dengan leveling `Basic`, `Intermediate` dan `Advanced`, peserta akan memilih salah satu dari ke-lima topik tersebut untuk dijadikan concern sampai pertemuan ke-14.
 
 Pilihan Topik:
 | No | Topik | Level | Quota |Link |
@@ -15,6 +15,15 @@ Pilihan Topik:
 | 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-2.md)|
 | 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
 | 5 | CLI App & Web Service : Database Auto Restore| Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
+
+
+## Timeline
+
+1. Pengembangan & Dedicated Mentoring : `1 s/d 24 April 2024`
+2. Pemantapan Project : `Kamis 25 April 2024`
+3. Demo Day : `Senin 29 April 2024`
+
+## Komponen Penilaian
 
 
 
