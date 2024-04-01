@@ -5,7 +5,7 @@ Dalam final project ini peserta akan dibagi menjadi beberapa kelompok, dimana ma
 
 ## Topik Final Project
 
-Akan diberikan 5 pilihan topik dengan leveling `Basic`, `Intermediate` dan `Advanced`, peserta akan memilih salah satu dari ke-lima topik tersebut untuk dijadikan concern sampai pertemuan ke-14.
+Akan diberikan 5 pilihan topik dengan leveling `Basic`, `Intermediate` dan `Advanced`, peserta akan memilih salah satu dari ke-lima topik tersebut untuk dijadikan concern sampai pertemuan ke-14. Masing-masing topik hanya dapat dipilih sesuai quota yang tertera.
 
 Pilihan Topik:
 | No | Topik | Level | Quota |Link |
@@ -21,9 +21,16 @@ Pilihan Topik:
 
 1. Pengembangan & Dedicated Mentoring : `1 s/d 24 April 2024`
 2. Pemantapan Project : `Kamis 25 April 2024`
-3. Demo Day : `Senin 29 April 2024`
+3. Demo Day : `Senin 29 April 2024` *TBA
 
-## Komponen Penilaian
+## Komponen Penilaian Project
+
+1. `Kualitas Kode`: Kode harus jelas, mudah dibaca, dan mengikuti konvensi penulisan Go (seperti yang dijelaskan dalam dokumen resmi Go)
+2. `Struktur dan Organisasi`: Struktur direktori yang baik dan pemisahan kode menjadi paket/modul yang logis
+3. `Error Handling`: Pengelolaan error yang efektif dan benar, mengikuti pendekatan idiomatic Go
+4. `Efisiensi`: Kode harus efisien dalam hal penggunaan memori dan waktu eksekusi.
+5. `Concurrency`: Pemanfaatan fitur concurrency Go, seperti goroutine dan channel, dengan cara yang aman dan efektif.
+6. `Unit Testing`: Menggunakan unit testing untuk fungsi-fungsi yang dibuat.
 
 
 
