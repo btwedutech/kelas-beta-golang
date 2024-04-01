@@ -10,7 +10,7 @@ Akan diberikan 4 pilihan topik dengan leveling `Basic`, `Intermediate` dan `Adva
 Pilihan Topik:
 | No | Topik | Level | Quota |Link |
 |:--:|:------|:-----:|:----:|:----:
-| 1 | Web Service : Toko Retail | Basic |3| [Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-1.md) |
+| 1 | Web Service : Toko Retail | Basic |3| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-1.md) |
 | 2 |  CLI App : Data Validation | Basic |3|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
 | 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-2.md)|
 | 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
