@@ -152,7 +152,7 @@ file, err := os.Create("outputfile.sql")
 if err != nil {
     panic(err)
 }
-
+// Pastikan pada laptop/device kalian sudah ada mysqldump
 cmd := exec.Command("mysqldump","-h","192.168.0.1","-P","3306","-u","username","-pPassword","databasename")
 cmd.Stdout = file
 
