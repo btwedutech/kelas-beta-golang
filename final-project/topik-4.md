@@ -116,7 +116,7 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 1. CLI App setiap dijalankan akan otomatis melakukan proses `dump`, `zip`, `upload`
 2. Pertama kali aplikasi CLI akan membaca list database dari sebuah file json yang nantinya user bisa mengubah dan menambah database yang ingin dilakukan backup otomatis, sehingga tidak perlu men-listing database secara hardcode. [Contoh File JSON](#sample-1)
 3. Kemudian applikasi akan berjalan konkurent mulai dari proses dump, zip-ing hingga upload ke web service. Gunakan skema `Concurency: Pipeline Pattern`
-4. Proses dump-ing database akan menggunakan tool bantuan menggunakan `mysqldump`, dimana go akan melakukan exec command contoh `mysqldump -h 192.168.0.1 -P 3306 -u username_pt_abc -pPasswordPTAbc namaFile.sql`
+4. Proses dump-ing database akan menggunakan tool bantuan menggunakan `mysqldump`, dimana go akan melakukan exec command contoh `mysqldump -h 192.168.0.1 -P 3306 -u username_pt_abc -pPasswordPTAbc databasename`. [Contoh Source Code](#sample-2)
 5. Hasil dari dump akan disimpan kedalam sebuah file yang telah dibuat `os.Create(namaFile)` dengan `namaFile` memiliki format seperti `mysql-{timestamp}-{database_name}-{uuid}.sql`
 6. Setelah step pertama selesai, akan dilanjutkan dengan proses selanjutnya yaitu melakukan `zip` terhadap file `.sql` yang sudah di-dump tadi dengan bantuan package go `archive/zip`. Format nama file hasil `zip` adalah `mysql-{timestamp}-{database_name}-{uuid}.sql.zip`
 7. Tahap terakhir adalah melakukan `upload` file yang sudah di zip tadi ke web service yang sudah dibuat sebelumnya.
@@ -139,6 +139,27 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
         "db_password": "password"
     }
 ]
+```
+
+##### Sample 2
+```go
+
+// import "os"
+// import "os/exec"
+
+file, err := os.Create("outputfile.sql")
+
+if err != nil {
+    panic(err)
+}
+
+cmd := exec.Command("mysqldump","-h","192.168.0.1","-P","3306","-u","username","-pPassword","databasename")
+cmd.Stdout = file
+
+err = cmd.Run()
+if err != nil {
+    panic(err)
+}
 ```
 
 
