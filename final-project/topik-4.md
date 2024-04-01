@@ -23,8 +23,8 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
    |:-----|:-------|:----------|:-----|:---|:---|
    | /| GET |-|-| [Response 1](#response-1)|Memberikan list database yang dibackup terakhir| 
    | /{db_name}|GET | `db_name` : adalah nama database yang pernah di backup |-|[Response 2](#response-2)| Memberikan list history sebuah database file zip yang pernah di upload |
-   | /{db_name}|POST | `multipart/form-data` body dari file zip dan `db_name` sebagai parameter ||| Melakukan upload file zip ke web service|
-   |/{id_file}/download| GET | |||Melakukan download file|
+   | /{db_name}|POST |`db_name` : adalah nama database yang pernah di backup |`multipart/form-data` body dari file zip dan `db_name` sebagai parameter |[Response 3](#response-3)| Melakukan upload file zip ke web service|
+   |/{id_file}/download| GET |`id_file`: merupakan id file yang ingin di download|file zip dari storage|stream data |Melakukan download file|
    ###### Response 1
    ```json
    {
@@ -88,6 +88,19 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
                     "timestamp": "2023-10-29 00:00:00"
                 }
             ]
+        },
+        "message": "success"
+    }
+   ```
+
+   ##### Response 3
+   ```json
+    {
+        "data": {
+            "id": 295,
+            "database_name": "cv_kucing_oren",
+            "file_name": "mysql-2023-10-29-00-00-00-cv_kucing_oren-8634bf3f-23b5-45a7-8b78-fe9b1a3bcf66.sql.zip",
+            "timestamp": "2023-10-29 00:00:00"
         },
         "message": "success"
     }
