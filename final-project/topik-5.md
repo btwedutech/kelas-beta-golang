@@ -95,6 +95,9 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
         "message": "success"
     }
 ```
+```output
+Language hasn't been implemented yet
+```
 
    ##### Response 3
 ```json
@@ -214,6 +217,10 @@ func main() {
         fmt.Println("Unzipping completed successfully")
     }
 }
+```
+```output
+# command-line-arguments
+/var/folders/n7/8mp0ppwx59d6k1jmvcnxjhyc0000gn/T/codebook/go/main.go:55:1: syntax error: unexpected package, expected }
 ```
 
 ##### Sample 3
