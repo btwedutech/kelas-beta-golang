@@ -11,19 +11,19 @@ Pilihan Topik:
 | No | Topik | Level | Quota |Link |
 |:--:|:------|:-----:|:----:|:----:
 | 1 | Web Service : Toko Retail | Basic |3| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-1.md) |
-| 2 |  CLI App : Data Validation | Basic |3|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
-| 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-2.md)|
-| 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
-| 5 | CLI App & Web Service : Database Auto Restore| Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/final-project/topik-3.md)|
+| 2 |  CLI App : Data Validation | Basic |3|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-2.md)|
+| 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-3.md)|
+| 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-4.md)|
+| 5 | CLI App & Web Service : Database Auto Restore| Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-5.md)|
 
 
 ## Timeline
 
-1. Pengembangan & Dedicated Mentoring : `1 s/d 24 April 2024`
+1. Pengembangan Project & Dedicated Mentoring : `1 s/d 24 April 2024`
 2. Pemantapan Project : `Kamis 25 April 2024`
 3. Demo Day : `Senin 29 April 2024` *TBA
 
-## Komponen Penilaian Project
+## Komponen Umum Penilaian Project
 
 1. `Kualitas Kode`: Kode harus jelas, mudah dibaca, dan mengikuti konvensi penulisan Go (seperti yang dijelaskan dalam dokumen resmi Go)
 2. `Struktur dan Organisasi`: Struktur direktori yang baik dan pemisahan kode menjadi paket/modul yang logis
