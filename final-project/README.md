@@ -8,13 +8,13 @@ Dalam final project ini peserta akan dibagi menjadi beberapa kelompok, dimana ma
 Akan diberikan 5 pilihan topik dengan leveling `Basic`, `Intermediate` dan `Advanced`, peserta akan memilih salah satu dari ke-lima topik tersebut untuk dijadikan concern sampai pertemuan ke-14. Masing-masing topik hanya dapat dipilih sesuai quota yang tertera.
 
 Pilihan Topik:
-| No | Topik | Level | Quota |Link |
-|:--:|:------|:-----:|:----:|:----:
-| 1 | Web Service : Toko Retail | Basic |3| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-1.md) |
-| 2 |  CLI App : Data Validation | Basic |3|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-2.md)|
-| 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-3.md)|
-| 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-4.md)|
-| 5 | CLI App & Web Service : Database Auto Restore| Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-5.md)|
+| No | Topik | Level | Quota |Link | Dedicated Mentor |
+|:--:|:------|:-----:|:----:|:----:|:--|
+| 1 | Web Service : Toko Retail | Basic |3| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-1.md) | Adit|
+| 2 |  CLI App : Data Validation | Basic |3|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-2.md)| Gus Ram|
+| 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-3.md)| Adit/Gus Ram |
+| 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-4.md)| Pande |
+| 5 | CLI App & Web Service : Database Auto Restore| Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-5.md)| Pande|
 
 
 ## Timeline
