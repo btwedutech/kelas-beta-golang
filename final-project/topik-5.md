@@ -29,7 +29,7 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
    |/{id_file}/download| GET |`id_file`: merupakan id file yang ingin di download|file zip dari storage|stream data |Melakukan download file|
 
    ###### Response 1
-   ```json
+```json
    {
     "data": [
             {
@@ -67,10 +67,10 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
     ],
     "message": "Success"
    }
-   ```
+```
 
    ###### Response 2
-   ```json
+```json
     {
         "data": {
             "database_name": "cv_kucing_oren",
@@ -94,10 +94,10 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
         },
         "message": "success"
     }
-   ```
+```
 
    ##### Response 3
-   ```json
+```json
     {
         "data": {
             "id": 295,
@@ -107,7 +107,8 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
         },
         "message": "success"
     }
-   ```
+```
+
 2. Web Service menggunakan database MySQL yang digunakan untuk menyimpan history file yang pernah disimpan, struktur database dapat disesuikan seperti response data diatas.
 3. Web Service juga akan menyimpan file yang di upload nantinya kedalam sebuah folder, yang dimana ketika file ingin didownload, web service dapat penyediakan fungsi untuk mendownload tersebut.
 4. Penamaan file yang disimpan adalah file dari client, web service tidak melakukan renaming.
@@ -143,6 +144,7 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
     }
 ]
 ```
+
 ##### Sample 2
 ```go
 package main
@@ -253,6 +255,7 @@ func main() {
 }
 
 ```
+
 ##### Sample 4
 ```go
 package main
@@ -308,4 +311,5 @@ func main() {
 ```
 
 ##### Sample 5
-[Pipeline Pattern](resources/pipeline-5.png)
+![Pipeline Pattern](resources/pipeline-5.png)
+
