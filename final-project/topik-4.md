@@ -108,9 +108,9 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 2. Web Service menggunakan database MySQL yang digunakan untuk menyimpan history file yang pernah disimpan, struktur database dapat disesuikan seperti response data diatas.
 3. Web Service juga akan menyimpan file yang di upload nantinya kedalam sebuah folder, yang dimana ketika file ingin didownload, web service dapat penyediakan fungsi untuk mendownload tersebut.
 4. Penamaan file yang disimpan adalah file dari client, web service tidak melakukan renaming.
-5. Web Service memastikan data yang dikirim sesuai dengan valiadtio.
+5. Web Service memastikan data yang dikirim sesuai dengan validation.
 6. Setiap case error harus di handle oleh Web Service
-7. Dilengkapi dengan unit testing
+7. Dilengkapi dengan unit testing.
 
 #### 2. CLI App
 1. CLI App setiap dijalankan akan otomatis melakukan proses `dump`, `zip`, `upload`
