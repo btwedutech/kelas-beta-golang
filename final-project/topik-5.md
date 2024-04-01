@@ -119,9 +119,10 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 
 1. Pada aplikasi CLI ini dimulai dari membaca file konfigurasi database yang digunakan, yang dimana list database yang ingin direstore dilisting pada file ini dan tidak dilakukan hardcode yang selanjutnya disebut dengan file `config.json`. [Contoh file config.json](#sample-1)
 2. Setelah melakukan load terhadap file `config.json`, maka akan di fetch secara konkuren dari semua database yang terlisting pada file json dengan data pada web service, dimana akan mengambil history file yang paling terakhir untuk di download. 
-3. Jika sudah melakukan download file `zip` pada web service, selanjutnya file `.zip` tersebut disimpan pada local folder lalu di `unzip`. Sehingga akan mendapatkan file `.sql` yang siap untuk di-import ke dalam database. Unzip dapat menggunakan package `archive/zip`. [Contoh code unzip](#sample-2)
-4. Setelah melakukan `unzip` langkah selanjutnya adalah membuat database, lalu meng-import `.sql` file kedatabase yang telah dibuat. [Contoh code](#sample-3)
-5. Pastikan proses diatas berjalan menggunakan `concurency` dan disarankan menggunakan `pipeline pattern` sehingga lebih mudah dalam mamanaje `channel`.
+3. Lalu download file backup pada database yang dipilih. [Contoh code](#sample-4)
+4. Jika sudah melakukan download file `zip` pada web service, selanjutnya file `.zip` tersebut disimpan pada local folder lalu di `unzip`. Sehingga akan mendapatkan file `.sql` yang siap untuk di-import ke dalam database. Unzip dapat menggunakan package `archive/zip`. [Contoh code unzip](#sample-2)
+5. Setelah melakukan `unzip` langkah selanjutnya adalah membuat database, lalu meng-import `.sql` file kedatabase yang telah dibuat. [Contoh code](#sample-3)
+6. Pastikan proses diatas berjalan menggunakan `concurency` dan disarankan menggunakan `pipeline pattern` sehingga lebih mudah dalam mamanaje `channel`.
 
 ##### Sample 1
 ```json
@@ -226,6 +227,8 @@ func main() {
     // Tentukan kredensial dan detail database
     // Ambil dari file config.json
 
+    dbHost := "host"
+    dbPort := "port"
     dbName := "nama_database"
     dbUser := "user_database"
     dbPassword := "password_database"
@@ -233,6 +236,7 @@ func main() {
 
     // Buat string perintah untuk impor database
     // Gunakan `mysql` command untuk impor database
+    // Pastikan pada laptop/device sudah ter-install mysql
     cmdString := fmt.Sprintf("mysql -u %s -p%s %s < %s", dbUser, dbPassword, dbName, filePath)
 
     // Jalankan perintah menggunakan shell (bash) untuk memastikan pengalihan input (<) bekerja
@@ -249,4 +253,56 @@ func main() {
 }
 
 ```
+##### Sample 4
+```go
+package main
 
+import (
+    "io"
+    "net/http"
+    "os"
+    "fmt"
+)
+
+// downloadFile fungsi untuk mendownload file dari URL tertentu dan menyimpannya ke path lokal.
+func downloadFile(fileURL, savePath string) error {
+    // Buat HTTP request
+    resp, err := http.Get(fileURL)
+    if err != nil {
+        return err
+    }
+    defer resp.Body.Close()
+
+    // Pastikan kita mendapatkan respons HTTP 200 OK.
+    if resp.StatusCode != http.StatusOK {
+        return fmt.Errorf("server return non-200 status: %d %s", resp.StatusCode, resp.Status)
+    }
+
+    // Buat file lokal
+    outFile, err := os.Create(savePath)
+    if err != nil {
+        return err
+    }
+    defer outFile.Close()
+
+    // Salin data dari HTTP response ke file lokal
+    _, err = io.Copy(outFile, resp.Body)
+    return err // akan nil jika tidak ada error
+}
+
+func main() {
+    // URL layanan web, ganti {id} dengan ID yang sesuai.
+    fileURL := "http://web-service/{id}/download"
+
+    // Path lokal tempat file akan disimpan
+    savePath := "/path/to/your/local/filename.zip"
+
+    // Panggil fungsi download
+    if err := downloadFile(fileURL, savePath); err != nil {
+        fmt.Printf("Error downloading file: %s\n", err)
+    } else {
+        fmt.Println("File downloaded successfully.")
+    }
+}
+
+```
