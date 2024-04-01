@@ -68,7 +68,29 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 
    ###### Response 2
    ```json
-
+    {
+        "data": {
+            "database_name": "cv_kucing_oren",
+            "histories": [
+                {
+                    "id" : 303,
+                    "file_name": "mysql-2023-10-31-00-00-00-cv_kucing_oren-0f69a75b-9fdf-48c6-8ec9-2277934b7bb8.sql.zip",
+                    "timestamp": "2023-10-31 00:00:00"
+                },
+                {
+                    "id": 299,
+                    "file_name": "mysql-2023-10-30-00-00-00-cv_kucing_oren-7634bf3f-23b5-45a7-8b78-fe9b1a3bcf66.sql.zip",
+                    "timestamp": "2023-10-30 00:00:00"
+                },
+                {
+                    "id": 295,
+                    "file_name": "mysql-2023-10-29-00-00-00-cv_kucing_oren-8634bf3f-23b5-45a7-8b78-fe9b1a3bcf66.sql.zip",
+                    "timestamp": "2023-10-29 00:00:00"
+                }
+            ]
+        },
+        "message": "success"
+    }
    ```
 2. 
 3. 
