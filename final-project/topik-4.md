@@ -9,6 +9,8 @@ Suatu hari technical lead di perusahaan anda, meminta anda untuk membuat service
 
 ### Project Specification
 
+![Skema](resources/topik-4.jpg)
+
 Pada project ini akan ada 2 aplikasi/service yang ada harus buat
 
 #### 1. Web Service
