@@ -3,7 +3,7 @@
 
 ### Deskripsi Project 
 
-Anda adalah seorang sistem engineer yang bekerja pada sebuah perusahaan multinasional yang bergerak dalam pengembangan sistem enterprise. Saat ini perushaan anda telah meng-handle lebih dari 100 client mulai dari sistem hingga infrastruktur yang mereka gunakan. 
+Anda adalah seorang system engineer yang bekerja pada sebuah perusahaan multinasional yang bergerak dalam pengembangan sistem enterprise. Saat ini perushaan anda telah meng-handle lebih dari 100 client mulai dari sistem hingga infrastruktur yang mereka gunakan. 
 
 Suatu hari technical lead di perusahaan anda, meminta anda untuk membuat service app untuk melakukan automation backup database pada setiap project client setiap harinya. Yang dimana setiap database yang telah di *dump* lalu di compress dengan ZIP lalu di upload ke sebuah web service yang fungsi utamanya untuk menerima backup database yang sudah di zip/compress.
 
@@ -105,7 +105,41 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
         "message": "success"
     }
    ```
-2. 
-3. 
+2. Web Service menggunakan database MySQL yang digunakan untuk menyimpan history file yang pernah disimpan, struktur database dapat disesuikan seperti response data diatas.
+3. Web Service juga akan menyimpan file yang di upload nantinya kedalam sebuah folder, yang dimana ketika file ingin didownload, web service dapat penyediakan fungsi untuk mendownload tersebut.
+4. Penamaan file yang disimpan adalah file dari client, web service tidak melakukan renaming.
+5. Web Service memastikan data yang dikirim sesuai dengan valiadtio.
+6. Setiap case error harus di handle oleh Web Service
+7. Dilengkapi dengan unit testing
+
+#### 2. CLI App
+1. CLI App setiap dijalankan akan otomatis melakukan proses `dump`, `zip`, `upload`
+2. Pertama kali aplikasi CLI akan membaca list database dari sebuah file json yang nantinya user bisa mengubah dan menambah database yang ingin dilakukan backup otomatis, sehingga tidak perlu men-listing database secara hardcode. [Contoh File JSON](#sample-1)
+3. Kemudian applikasi akan berjalan konkurent mulai dari proses dump, zip-ing hingga upload ke web service. Gunakan skema `Concurency: Pipeline Pattern`
+4. Proses dump-ing database akan menggunakan tool bantuan menggunakan `mysqldump`, dimana go akan melakukan exec command contoh `mysqldump -h 192.168.0.1 -P 3306 -u username_pt_abc -pPasswordPTAbc namaFile.sql`
+5. Hasil dari dump akan disimpan kedalam sebuah file yang telah dibuat `os.Create(namaFile)` dengan `namaFile` memiliki format seperti `mysql-{timestamp}-{database_name}-{uuid}.sql`
+6. Setelah step pertama selesai, akan dilanjutkan dengan proses selanjutnya yaitu melakukan `zip` terhadap file `.sql` yang sudah di-dump tadi dengan bantuan package go `archive/zip`. Format nama file hasil `zip` adalah `mysql-{timestamp}-{database_name}-{uuid}.sql.zip`
+7. Tahap terakhir adalah melakukan `upload` file yang sudah di zip tadi ke web service yang sudah dibuat sebelumnya.
+
+##### Sample 1
+```json
+[
+    {
+        "database_name": "pt_xyz",
+        "db_host": "192.168.0.1",
+        "db_port": "3306",
+        "db_username": "user",
+        "db_password": "password"
+    },
+    {
+        "database_name": "pt_abc",
+        "db_host": "192.168.0.2",
+        "db_port": "3306",
+        "db_username": "user",
+        "db_password": "password"
+    }
+]
+```
+
 
 
