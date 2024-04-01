@@ -120,6 +120,7 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 5. Hasil dari dump akan disimpan kedalam sebuah file yang telah dibuat `os.Create(namaFile)` dengan `namaFile` memiliki format seperti `mysql-{timestamp}-{database_name}-{uuid}.sql`
 6. Setelah step pertama selesai, akan dilanjutkan dengan proses selanjutnya yaitu melakukan `zip` terhadap file `.sql` yang sudah di-dump tadi dengan bantuan package go `archive/zip`. Format nama file hasil `zip` adalah `mysql-{timestamp}-{database_name}-{uuid}.sql.zip`
 7. Tahap terakhir adalah melakukan `upload` file yang sudah di zip tadi ke web service yang sudah dibuat sebelumnya.
+8. Konsep yang dapat digunakana pada proses ini adalah `Concurency: Pipeline Pattern` [Lihat konsep](#sample-3)
 
 ##### Sample 1
 ```json
@@ -161,6 +162,9 @@ if err != nil {
     panic(err)
 }
 ```
+
+##### Sample 3
+![Pipeline Pattern](resources/pipeline-4.png)
 
 
 

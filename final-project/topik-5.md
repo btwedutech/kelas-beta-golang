@@ -122,7 +122,7 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 3. Lalu download file backup pada database yang dipilih. [Contoh code](#sample-4)
 4. Jika sudah melakukan download file `zip` pada web service, selanjutnya file `.zip` tersebut disimpan pada local folder lalu di `unzip`. Sehingga akan mendapatkan file `.sql` yang siap untuk di-import ke dalam database. Unzip dapat menggunakan package `archive/zip`. [Contoh code unzip](#sample-2)
 5. Setelah melakukan `unzip` langkah selanjutnya adalah membuat database, lalu meng-import `.sql` file kedatabase yang telah dibuat. [Contoh code](#sample-3)
-6. Pastikan proses diatas berjalan menggunakan `concurency` dan disarankan menggunakan `pipeline pattern` sehingga lebih mudah dalam mamanaje `channel`.
+6. Pastikan proses diatas berjalan menggunakan `concurency` dan disarankan menggunakan `pipeline pattern` sehingga lebih mudah dalam mamanaje `channel`. [Contoh konsep](#sample-5)
 
 ##### Sample 1
 ```json
@@ -306,3 +306,6 @@ func main() {
 }
 
 ```
+
+##### Sample 5
+[Pipeline Pattern](resources/pipeline-5.png)
