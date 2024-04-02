@@ -12,7 +12,7 @@ Pilihan Topik:
 |:--:|:------|:-----:|:----:|:----:|:--|
 | 1 | Web Service : Toko Retail | Basic |3| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-1.md) | Adit|
 | 2 |  CLI App : Data Validation and Convert | Basic |3|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-2.md)| Gus Ram|
-| 2 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-3.md)| Adit/Gus Ram |
+| 3 | Web Service : Question Random Generator | Intermediate|2| [Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-3.md)| Adit/Gus Ram |
 | 4 | CLI App & Web Service : Database Auto Backup|Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-4.md)| Pande |
 | 5 | CLI App & Web Service : Database Auto Restore| Advanced|2|[Detail](https://github.com/btwedutech/kelas-beta-golang/blob/main/final-project/topik-5.md)| Pande|
 
