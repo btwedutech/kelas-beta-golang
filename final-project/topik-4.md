@@ -108,9 +108,10 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 2. Web Service menggunakan database MySQL yang digunakan untuk menyimpan history file yang pernah disimpan, struktur database dapat disesuikan seperti response data diatas.
 3. Web Service juga akan menyimpan file yang di upload nantinya kedalam sebuah folder, yang dimana ketika file ingin didownload, web service dapat penyediakan fungsi untuk mendownload tersebut.
 4. Penamaan file yang disimpan adalah file dari client, web service tidak melakukan renaming.
-5. Web Service memastikan data yang dikirim sesuai dengan valiadtio.
-6. Setiap case error harus di handle oleh Web Service
-7. Dilengkapi dengan unit testing
+5. Web Service memastikan data yang dikirim sesuai dengan validation.
+6. Untuk memastikan bahwa yang akan menggunakan web service ini harus di-authenticate maka web service harus dibuatkan middleware yang memvalidasi `Authorization` header yang dikirimkan oleh client untuk semua route, dimana mekanisme authentication dapat menggunakan static token yang disimpan di server dan client
+7. Setiap case error harus di handle oleh Web Service
+8. Dilengkapi dengan unit testing.
 
 #### 2. CLI App
 1. CLI App setiap dijalankan akan otomatis melakukan proses `dump`, `zip`, `upload`
@@ -120,6 +121,7 @@ Sesuai dengan informasi yang diberikan oleh tech lead anda, bahwa akan ada web s
 5. Hasil dari dump akan disimpan kedalam sebuah file yang telah dibuat `os.Create(namaFile)` dengan `namaFile` memiliki format seperti `mysql-{timestamp}-{database_name}-{uuid}.sql`
 6. Setelah step pertama selesai, akan dilanjutkan dengan proses selanjutnya yaitu melakukan `zip` terhadap file `.sql` yang sudah di-dump tadi dengan bantuan package go `archive/zip`. Format nama file hasil `zip` adalah `mysql-{timestamp}-{database_name}-{uuid}.sql.zip`
 7. Tahap terakhir adalah melakukan `upload` file yang sudah di zip tadi ke web service yang sudah dibuat sebelumnya.
+8. Konsep yang dapat digunakana pada proses ini adalah `Concurency: Pipeline Pattern` [Lihat konsep](#sample-3)
 
 ##### Sample 1
 ```json
@@ -161,6 +163,9 @@ if err != nil {
     panic(err)
 }
 ```
+
+##### Sample 3
+![Pipeline Pattern](resources/pipeline-4.png)
 
 
 
