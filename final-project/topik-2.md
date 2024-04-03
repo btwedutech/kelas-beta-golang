@@ -109,7 +109,7 @@ Terjadi error : index is not valid
 ```
 
 11. Mengimplementasikan Goroutine dan channeling, agar dapat memproses setidaknya 5 data csv secara paralel saat proses validasi dan konversi json
-
+12. Sample data bisa dicek di resources/sample_datas_small.csv dan resources/sample_datas.csv
 
 ### Optional :
 Mengimplementasikan package third-party ```github.com/schollz/progressbar/v3``` untuk menunjukan sejauh mana proses yang sedang berjalan
