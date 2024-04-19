@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package greet;
+
+option go_package = "./proto";
+
+service GreetService {
+    rpc Greet(GreetRequest) returns (GreetResponses) {}
+    rpc GreetStream(GreetStreamRequest) returns (stream GreetStreamResponses) {}
+    rpc StoreStream(stream GreetStreamRequest) returns (stream StoreStreamResponses){}
+}
+
+message StoreStreamResponses {
+    string username = 1;
+}
+
+message GreetStreamRequest{
+    string username = 1;
+}
+
+message GreetStreamResponses {
+    int64 part = 1;
+    string message = 2;
+}
+
+message GreetRequest {
+    string username = 1;
+    int64 phone = 2;
+}
+
+message GreetResponses {
+    string greetresponse = 1;
+}
