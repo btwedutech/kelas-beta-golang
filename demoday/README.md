@@ -6,7 +6,7 @@ Hari    : Senin 29 April 2024
 
 Waktu   : 18.00 s/d 21.00 WITA
 
-## Kelengkapan & Attribute
+### Kelengkapan & Attribute
 
 1. Menggunakan Baju Kaos Sekolah Beta. WAJIB! 
 2. Memakai nametag. WAJIB!
