@@ -25,4 +25,3 @@ Untuk mekanisme Demo Day nanti sebagai berikut :
    4. Jika menggunakan advanced fitur go seperti Goroutine, Channel, GRPC dan Concurency Pattern dijelaskan juga apa kelebihannya dibandingkan tidak menggunakannya.
 3. Jika dibutuhkan alat bantu presentasi seperti slide silakan disiapkan juga.
 4. Masing-masing kelompok akan dirandom untuk mendapatkan urutan demo.
-5. Sesi demo akan dilakukan secara private, dimana pada ruangan hanya ada kelompok yang mendapat giliran, mentor dan special guest.
